@@ -1,0 +1,131 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-padding-top: 5rem;
+}
+
+main{
+    flex: 1;
+}
+
+section{
+    width: 100%;
+}
+
+.bg-img{
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.btn-ico{
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.no-select, .no-select * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.no-display{
+    display: none;
+}
+
+.no-decoration-box{
+    background: none;
+    border: none;    
+    outline: none;
+}
+
+.container{
+    width: 85%;
+    box-sizing: border-box;
+}
+
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary{
+    text-transform: capitalize;
+    border-radius: 100px;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    background-color: rgb(var(--alura-color));
+}
+
+.grid{
+    display: grid;
+}
+
+.bar{
+    background-color: rgb(var(--alura-color));
+    height: 1rem;
+    width: 100%;
+}
+
+.bash{
+    padding: 0.7rem 0.7rem;
+    border-radius: 9px;
+    color: rgb(var(--color-bash));
+    background-color: #43413F;
+    align-items: center;
+}
+
+.copy-symbol{
+    transform: rotate(180deg);
+    right: 0.5rem;
+}
+
+.bash-message{
+    color: gray;
+    width: 100%;
+    text-align: end;
+}
+
+
+@media only screen and (width<950px) {
+    .container{
+        width: 90%;
+    }
+}

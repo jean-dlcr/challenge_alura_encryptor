@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura System</title>
+    <link rel="icon" type="image/x-icon" href="../assets/icon.ico">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body class="flex flex-column no-display relative">
+    <header class="flex relative no-select color-white">
+        <label class="alura-text absolute no-select">Alura</label>
+        <div class="shortcuts-taskbar flex flex-row">
+            <div class="btn-ico flex pinned-icon logo">
+                <div class="img bg-img btn-ico"></div>
+            </div>
+            <div class="vertical-line"></div>
+            <button id="btnIcon_console" class="btn-ico flex pinned-icon console color-white"><label>$_</label></button>
+            <button id="btnIcon_filetext" class="btn-ico flex pinned-icon text" style="display: none;">
+                <div class="bg-img img btn-ico"></div>
+            </button>
+            <div class="vertical-line"></div>
+        </div>
+        <div class="right-side-taskbar flex">
+            <div class="time no-select"><label id="timer"></label></div>
+            <a class="pointer flex flex-center" href="../index.html">
+                <span class="material-symbols-outlined color-white no-select">power_settings_new</span>
+            </a>
+        </div>
+    </header>
+    <main class="bg-img relative">
+
+        <div class="shortcuts flex color-white no-select">
+            <button id="btnDesktop_encrypt" class="no-decoration-box flex flex-column flex-center color-white">
+                <div class="img bg-img btn-ico pinned-icon script-icon"></div>
+                <p>encrypt.desktop</p>
+            </button>
+            <button id="btnDesktop_decrypt" class="no-decoration-box flex flex-column flex-center color-white">
+                <div class="img bg-img btn-ico pinned-icon script-icon"></div>
+                <p>decrypt.desktop</p>
+            </button>
+            <button id="btnDesktop_fileText" class="no-decoration-box flex-column flex-center color-white">
+                <div class="img bg-img btn-ico pinned-icon textfile-icon"></div>
+                <p>File.txt</p>
+            </button>
+
+            <button id="btnDesktop_resultText" class="no-decoration-box flex-column flex-center color-white">
+                <div class="img bg-img btn-ico pinned-icon textfile-icon"></div>
+                <p>Result.txt</p></label>
+            </button>
+
+
+        </div>
+
+        <div id="consoleBox" class="window-container absolute flex flex-column no-select">
+            <div id="consoleHeader" class="window-header color-white relative flex bg-color-primary">
+                <label class="absolute label-user"></label>
+                <div class="flex btns-container">
+                    <button id="btnMinimizeConsole" class="no-decoration-box flex flex-center btn-ico pointer">
+                        <span class="material-symbols-outlined">
+                            remove
+                        </span>
+                    </button>
+
+                    <button id="btnCloseConsole" class="flex flex-center btn-ico pointer btn-close">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+            <div class="window-content color-white">
+                <div class="console-row flex flex-column">
+                    <div class="flex" style="column-gap: 0.5rem;">
+                        <label class="label-user color-alura"></label>
+                        <input id="startInputConsoleRow" class="no-decoration-box" type="text" spellcheck="false"
+                            autocomplete="off" />
+                    </div>
+                    <label class="no-display flex"></label>
+                </div>
+                <div id="encryptWelcomeMessage" class="encrypt-welcome no-display">
+                    <div class="console-row">
+                        <pre>
+ _____                            _   
+|  ___|                          | |  
+| |__ _ __   ___ _ __ _   _ _ __ | |_ 
+|  __| '_ \ / __| '__| | | | '_ \| __|
+| |__| | | | (__| |  | |_| | |_) | |_ 
+\____/_| |_|\___|_|   \__, | .__/ \__|
+                       __/ | |        
+                      |___/|_|        
+      
+                               </pre>
+                    </div>
+                    <div class="console-row">
+                        <p class="encrypt-instructions">Welcome to encrypt v1.1<br><br>
+                            -e ["file/path"]: To encrypt file<br>
+                            -d ["file/path"]: To decrypt file<br>
+                            exit &#9;: To exit program<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fileBoxFile" class="filebox window-container absolute flex flex-column no-select bg-color-primary">
+            <div id="fileBoxFile_header" class="window-header color-white relative flex bg-color-primary">
+                <label class="absolute">File.txt</label>
+                <div class="flex btns-container">
+                    <button id="btnMinimizeFileText_File" class="no-decoration-box flex flex-center btn-ico pointer">
+                        <span class="material-symbols-outlined">
+                            remove
+                        </span>
+                    </button>
+                    <button id="btnCloseFileText_File" class="flex flex-center btn-ico pointer btn-close">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="window-content flex">
+                <button class="copy-symbol absolute no-decoration-box color-alura">
+                    <span class="material-symbols-outlined">
+                        content_copy
+                    </span>
+                </button>
+                <textarea id="file_textarea" class="no-decoration-box color-white"></textarea>
+            </div>
+        </div>
+
+        <div id="fileBoxResult" class="filebox window-container absolute flex flex-column no-select bg-color-primary">
+            <div id="fileBoxResult_header" class="window-header color-white relative flex bg-color-primary">
+                <label class="absolute">Result.txt</label>
+                <div class="flex btns-container">
+                    <button id="btnMinimizeFileText_Result" class="no-decoration-box flex flex-center btn-ico pointer">
+                        <span class="material-symbols-outlined">
+                            remove
+                        </span>
+                    </button>
+                    <button id="btnCloseFileText_Result" class="flex flex-center btn-ico pointer btn-close">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="window-content flex">
+                <button class="copy-symbol absolute no-decoration-box color-alura">
+                    <span class="material-symbols-outlined">
+                        content_copy
+                    </span>
+                </button>
+                <textarea id="result_textarea" class="no-decoration-box color-white"></textarea>
+            </div>
+        </div>
+
+        <div id="alertBox" class="alertBox window-container absolute flex flex-column no-select bg-color-primary">
+            <div id="alertBox_header" class="window-header color-white relative flex bg-color-primary">
+                <label class="absolute">Error</label>
+            </div>
+            <div class="window-content flex flex-column">
+                <div class="error-container flex">
+                    <div class="img bg-img btn-ico pinned-icon"></div>
+                    <p class="color-white"></p>
+                </div>
+                <button id="btnCloseAlertBox" class="no-decoration-box color-white">OK</button>
+            </div>
+        </div>
+
+    </main>
+<input type="checkbox" id="toogleToast" class="no-display">
+<div class="toast"><label>Copied!</label></div>
+    <script src="./js/index.js" type="module"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

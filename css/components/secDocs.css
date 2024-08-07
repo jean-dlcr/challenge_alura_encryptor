@@ -1,0 +1,75 @@
+#secDocs{
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+#secDocs .grid{    
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+
+
+#secDocs ol, #secDocs ul{
+    padding: 1.1rem;
+    gap: 1rem;
+}
+
+#secDocs li{
+    line-height: 1.5;
+}
+
+#secDocs li .item{
+    gap: 1rem;
+}
+
+#secDocs li strong{
+    width: 4.5rem;
+    justify-content: space-between;
+}
+
+#secDocs .left-side, #secDocs .right-side{
+    align-items: center;
+    gap: 1rem;
+}
+
+#secDocs h3{
+    padding: 0rem 1rem;
+    width: max-content;
+    border-bottom: 4px solid rgb(var(--primary-color));
+}
+
+#secDocs .img-container img{
+    width: 100%;
+}
+
+#secDocs ol{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#secDocs .docs-console .grid{
+    width: 100%;
+}
+
+#secDocs .docs-console{
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+#secDocs .docs-console .right-side img{
+    object-fit: contain;
+    max-height: 25rem;
+}
+
+#secDocs .bash{
+    margin-top: 0.5rem;
+}
+
+@media only screen and (width<690px) {
+    #secDocs .img-container{
+        padding: 0rem 2rem;
+    }
+}
+
+

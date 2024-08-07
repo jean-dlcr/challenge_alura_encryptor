@@ -1,0 +1,37 @@
+:root{
+    --primary-color: 34, 37, 44;
+    --bg-color: 39, 42, 52;
+    --alura-color: 42, 122, 228;
+    --color-custom-gray: 107, 109, 114;
+    --color-default-a: 93, 127, 172;
+    --color-bash: 222, 203, 110;
+}
+
+.color-primary{
+    color: rgb(var(--primary-color));
+}
+
+.color-alura{
+    color: rgb(var(--alura-color));
+}
+
+.color-white{
+    color: white;
+}
+
+.color-default-a{
+    color: rgb(var(--color-default-a));
+}
+
+.color-bash{
+    color: rgb(var(--color-bash));
+}
+
+.bg-color-gray{
+    /* background-color: #7F8386; */
+    background-color: rgb(var(--color-custom-gray));
+}
+
+.bg-color-primary{
+    background-color: rgb(var(--primary-color));
+}

@@ -1,0 +1,81 @@
+#aboutMe{
+    margin-top: 6rem;
+    padding: 4rem 0;
+}
+
+#aboutMe .me-img{
+    background-image: url(../../assets/images/me.jpg);
+    height: 20rem;
+    border-radius: 100%;
+}
+
+#aboutMe .grid{
+    gap: 4rem;
+    grid-template-columns: auto 1fr;
+}
+
+#aboutMe .right-side{
+    gap: 2rem;
+}
+
+#aboutMe .section-title{
+    margin-bottom: 0;
+}
+
+#aboutMe .bar{
+    width: 0;
+    flex-grow: 1;
+}
+
+#aboutMe .name{
+    font-size: 1.4rem;
+}
+
+#aboutMe p{
+    line-height: 1.5;
+    
+    text-align: justify;
+}
+
+#aboutMe .github{
+    font-size: 1.2rem;
+}
+
+#aboutMe a{
+    text-decoration: none;
+}
+
+#aboutMe a:active{
+    color: rgb(var(--alura-color));
+}
+
+
+
+@media only screen and (width<950px) {
+    #aboutMe .me-img {
+        height: 15rem;
+    }
+
+    #aboutMe .grid {
+        gap: 3rem;
+    }
+}
+
+
+@media only screen and (width<700px) {
+    
+    #aboutMe .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media only screen and (width<450px) {
+    
+    #aboutMe .bar {
+        flex: auto;
+        width: 100%;
+    }
+}
+
+

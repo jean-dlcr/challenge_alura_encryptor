@@ -1,0 +1,34 @@
+@import "../../css/base/colors.css";
+@import "../../css/base/base.css";
+@import "./components/actions_animations.css";
+@import "./components/header.css";
+@import "./components/desktop.css";
+@import "./components/console.css";
+@import "./components/filetext.css";
+@import "./components/toast.css";
+
+:root{
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --br-console-window: 20px;
+    --header-height: 38px;
+    --console-user: "guest@alura-challenge:~";
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+main.bg-img{
+    background-image: url(../assets/images/kali-bg.png);
+}
+
+main{
+    margin-top: 25px;
+}
+
+body{
+    background-color: rgb(var(--bg-color));
+}

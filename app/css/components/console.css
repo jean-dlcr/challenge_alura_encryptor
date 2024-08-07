@@ -1,0 +1,38 @@
+.label-user::before{
+    content: var(--console-user);
+    font-family: 'Roboto', sans-serif;
+}
+
+.console-row  .label-user{
+    font-weight: 800;
+    text-wrap: nowrap;
+}
+
+
+/*-------------------Console row-------------------*/
+.console-row{
+    color: white;
+    row-gap: 0.3rem;
+    margin-bottom: 0.5rem;   
+}
+
+.console-row  input{
+    color: white;
+    caret-color: white;
+    width: 100%;
+}
+
+.encrypt-welcome{
+    margin-top: 1rem;
+}
+
+.encrypt-welcome .console-row pre{
+    font-size: 0.6rem;
+    color: rgb(var(--alura-color));
+}
+
+.encrypt-welcome .console-row .encrypt-instructions{
+    line-height: 1.5;
+}
+
+

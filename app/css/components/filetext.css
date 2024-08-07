@@ -1,0 +1,38 @@
+.filebox{
+    height: 10rem;
+    left: 40%;
+    top: 0;
+}
+
+.filebox.window-container {
+    background-color: rgb(var(--primary-color),1);
+    
+}
+
+.filebox .window-content{
+    padding-right: 0px;
+}
+
+.filebox textarea{
+    flex: 1;
+    resize: none;
+    padding-right: 0.8rem;
+}
+
+
+#fileBoxResult{
+    top:5rem;
+}
+
+.filebox .copy-symbol{
+    bottom: 0.5rem;
+}
+
+
+@media screen and (width<450px) {
+    .filebox{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}

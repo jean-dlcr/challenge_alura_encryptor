@@ -1,0 +1,17 @@
+footer{
+    background-color: rgb(var(--alura-color));
+    padding: 1rem 1rem;
+    font-weight: 600;
+}
+
+footer label{
+    text-align: center;
+}
+
+
+@media only screen and (width<550px) {
+    footer label{
+        font-size: 0.9rem;
+    }
+
+}

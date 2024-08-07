@@ -1,0 +1,141 @@
+header{
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);    
+    padding: 1rem 0;
+    margin-top: 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .container{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container{
+    gap: 1rem;
+}
+
+.logo{
+    background-image: url(../../assets/images/logoalura.png);
+    height: 3rem;
+    border-radius: 7px;
+}
+
+.logo-container  h1{
+    font-family: 'Arial Black', 'Arial Bold';
+    line-height: 1;
+    font-size: 1.5em;
+}
+
+header nav ul{
+    list-style-type: none;
+    justify-content: center;
+    align-items: normal;
+}
+
+header nav ul li{
+    padding: 0rem 1.5rem;
+    align-items: center;
+}
+
+header nav ul li:last-child{
+    padding: 0;
+    padding-left: 1.5rem;
+}
+
+header nav a{
+    text-decoration: none;
+}
+
+header nav a.active{
+    color: white;
+}
+
+.btn-toggle-sidebar{
+    display: none;
+}
+
+
+.overlay{
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.btn-close, .overlay{
+    display: none;
+}
+
+
+
+#checkToggleSidebar:checked ~ * {
+    display: flex;
+}
+
+@media only screen and (width<1200px) {
+    header .container{
+        width: 90%;
+    }
+
+    header nav ul li {
+        padding: 0rem 0.6rem;
+    }
+    
+}
+
+
+
+@media only screen and (width<990px) {
+    
+    header nav a.active{
+        color: rgb(var(--primary-color));
+    }
+
+    .btn-close{
+        display: flex;
+        align-self: end;
+
+    }
+
+    .navbar-responsive{
+        display: none;
+        position: fixed;
+        background-color: white; 
+        bottom: 0;
+        top: 0;
+        right: 0;
+        padding: 0rem 3rem;
+        padding-top: 3rem;
+        z-index:3;
+        gap: 2rem;
+    }
+
+    header nav ul li:last-child {
+        padding-left: 0rem;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 2rem;
+        height: max-content;
+    }
+
+    .btn-toggle-sidebar{
+        display: flex;
+    }
+
+    
+    
+}
+
+
+@media only screen and (width<460px) {
+    
+}

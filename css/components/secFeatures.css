@@ -1,0 +1,33 @@
+#secFeatures{
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#secFeatures .container .section-title{
+    margin-bottom: 6rem;
+}
+
+div.easy{
+    background-image: url(../../assets/icon/easy.svg);
+}
+
+div.fast{
+    background-image: url(../../assets/icon/fast.svg);
+}
+
+div.responsive{
+    background-image: url(../../assets/icon/responsive.svg);
+}
+
+div.kali{
+    background-image: url(../../assets/icon/kali.svg);
+}
+
+@media only screen and (width<950px) {
+    #secFeatures .container .section-title {
+        margin-bottom: 3rem;
+    }
+}
+ 
+
+

@@ -1,0 +1,12 @@
+@import "./base/colors.css";
+@import "./base/base.css";
+
+@import "./components/header.css";
+@import "./components/main.css";
+@import "./components/secHome.css";
+@import "./components/secFeatures.css";
+@import "./components/secDocs.css";
+@import "./components/aboutMe.css";
+
+@import "./components/footer.css";
+

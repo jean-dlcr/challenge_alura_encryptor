@@ -1,0 +1,82 @@
+header{
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    width: 100vw;
+    padding: 0.2rem 0.5rem;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);       
+}
+
+.shortcuts-taskbar {
+    height: 100%;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.pinned-icon{
+    border-radius: 5px;
+    padding: 0.1rem;
+    box-sizing: border-box;
+}
+
+
+div.vertical-line{
+    width: 0px;
+    height: 90%;
+    border: 1px inset #8C9091;
+    
+  }
+
+.logo{
+    background-color: rgb(var(--alura-color));
+    border: 1px solid rgb(var(--primary-color));
+}
+
+.logo .img{
+    background-image:url(../../assets/images/header/kali.svg);
+}
+
+header .console{
+     background-color: black;
+     border: 1px solid #8C9091;
+     font-weight: bold;
+     padding-left: 0.2rem;
+     align-items: baseline;
+     font-size: 0.6rem;
+}
+
+.text{
+    background-color: white;
+    border: 1px solid rgb(var(--primary-color));
+}
+
+.text .img{
+    background-image: url(../../assets/images/header/edit-doc.svg);
+}
+
+.alura-text{
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right-side-taskbar{
+    gap:1.5rem;
+    align-items: center;
+}
+
+.right-side-taskbar > a{
+    text-decoration: none;
+}
+
+.time label{
+    font-weight: bold;
+}
+
+/*smartphones*/
+@media screen and (width<400px) {
+    .right-side-taskbar{
+        gap: 1rem;
+    }    
+}

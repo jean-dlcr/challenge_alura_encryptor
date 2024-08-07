@@ -1,0 +1,94 @@
+#secHome{
+    padding: 2rem 0rem;
+    background: linear-gradient(to bottom, #22252C, #2A7CE4);
+}
+
+#secHome .container{
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    column-gap: 1rem;
+    row-gap: 5rem;
+    margin-bottom: 2rem;
+    min-height: 27rem;
+}
+
+#secHome .div-img{
+    align-items: end;
+}
+
+#secHome .div-img .bg-img{
+    background-image: url(../../assets/images/we.png);
+    background-size: 100% 100%;
+    width: 100%;
+    aspect-ratio: 2.2;
+}
+
+#secHome .div-slogan{
+    justify-content: center;
+    gap: 2rem
+}
+
+#secHome h1{
+    font-size: 3rem;
+    line-height: 1.4;
+}
+
+#secHome .div-slogan a{
+    background-color: rgb(var(--primary-color));
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-align: center;
+    width: max-content;
+    padding: 0.7rem 2rem;
+}
+
+
+@media only screen and (width<1200px) {
+    #secHome h1{
+        font-size: 2.3rem;
+    }
+    
+    #secHome .div-slogan a{
+        
+        font-size: 1rem;
+        padding: 0.7rem 1.7rem;
+    }
+
+    #secHome .container{
+        min-height: auto; 
+    }
+}
+
+@media only screen and (width<950px) {
+    #secHome h1{
+        font-size: 2rem;
+    }
+    #secHome .div-slogan {
+        gap: 1rem;
+    }
+}
+
+
+@media only screen and (width<650px) {
+    #secHome h1{
+        text-align: center;
+    }
+
+    #secHome .div-slogan {
+        align-items: center;
+    }
+
+    #secHome .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #secHome h1{
+        font-size: 1.5rem;
+    }
+
+    #secHome .div-img{
+        width: 100%;
+    }
+}
