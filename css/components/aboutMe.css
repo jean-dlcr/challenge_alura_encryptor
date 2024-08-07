@@ -67,6 +67,10 @@
     #aboutMe .grid {
         grid-template-columns: 1fr;
     }
+
+    #aboutMe .name{
+        text-align: center;
+    }
 }
 
 

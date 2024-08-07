@@ -23,6 +23,10 @@
     gap: 1rem;
 }
 
+#secDocs .item p{
+    flex: 1;
+}
+
 #secDocs li strong{
     width: 4.5rem;
     justify-content: space-between;
