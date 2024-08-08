@@ -1,5 +1,5 @@
 import { clearConsole, makeActive, showElement } from "./iconsClick.js";
-import { encrypt, decrypt, textAreaIsEmpty, clearTextArea, hasSpecialCharacters } from "./encrypt_decrypt.js";
+import { encrypt, decrypt, textAreaIsEmpty, clearTextArea, hasSpecialCharacters, hasMayusLetters } from "./encrypt_decrypt.js";
 
 
 let lastInputConsoleRow = document.getElementById("startInputConsoleRow");
@@ -107,10 +107,16 @@ async function handleEncrypt(input = null, array_input = [], from = 0) {
             errorMsg = "Fatal error. Use File.txt to encrypt.";
         }
     }
+
     if (errorMsg.length === 0 && typeFile !== -1) {
         let subError = "";
+        
         if (textAreaIsEmpty(typeFile)) {
             subError = `${typeFile === 0 ? "File" : "Result"}.txt is empty. Nothing to ${typeFile === 0 ? "encrypt" : "decrypt"}.`;
+        }
+
+        if(hasMayusLetters(typeFile)){
+            subError=`Error. Only lower letters allowed.`;
         }
 
         if (subError.length === 0) {
@@ -152,6 +158,7 @@ function validateInput(array_input = []) {
         if(hasSpecialCharacters(1)) return `Error. Special characters or accents are not allowed.`;
     }
 
+
     return "";
 }
 
@@ -180,14 +187,13 @@ export function inputStartEnter(event) {
             }
         }
 
-        if(array_input.length>1){
+        
             if (errorMsg.length === 0) {
                 handleEncrypt(event.target, array_input.slice(1), 0);
             } else {
                 showErrorCommand(event.target, errorMsg);
                 lastInputConsoleRow = createRowConsole();
             }
-        }
         
     }
 

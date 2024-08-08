@@ -5,8 +5,13 @@ export function textAreaIsEmpty(typeFile = 0) {
 }
 
 export function hasSpecialCharacters(typeFile =0){
-    const regex = /^[a-z0-9]*$/;
+    const regex = /^[a-z0-9 ¿?!¡]*$/i;
     return !regex.test(document.getElementById(typeFile === 0 ? "file_textarea" : "result_textarea").value.trim().toLowerCase());
+}
+
+export function hasMayusLetters(typeFile=0){
+    let cad = document.getElementById(typeFile === 0 ? "file_textarea" : "result_textarea").value.trim() ;
+    return cad !== cad.toLowerCase();
 }
 
 function showErrorAlert(msg="") {
@@ -30,6 +35,10 @@ export function handleEncryptDecryptShortcut(what = "") {
         if (textAreaIsEmpty(indexTextarea)) showErrorAlert(`${indexTextarea === 0 ? "File" : "Result"}.txt is empty. Nothing to ${indexTextarea === 0 ? "encrypt" : "decrypt"}`);
 
         else {
+            if(hasMayusLetters(indexTextarea)){
+                showErrorAlert(`Error. Only lower letters are allowed`);
+                return null;
+            }
             if(hasSpecialCharacters(indexTextarea)) showErrorAlert(`Error. Special characters or accents are not allowed.`);
             else{
                 clearTextArea(clearID);
